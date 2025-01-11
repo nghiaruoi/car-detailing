@@ -8,7 +8,6 @@ Also includes a contact form to send me a message!
 ## Table of Contents
 
 - [Installation](#installation)
-- [Link](#link-to-deployed-application)
 - [Credits](#credits)
 - [License](#license)
 
@@ -19,14 +18,6 @@ Install the node packages with "npm i" within the application directory.
 This will install all the necessary React libraries.  
 
 Run "npm start" to automatically launch the default web browser and open the portfolio on the localhost server.  
-
-### Link to deployed application
-
-https://professional-portfolio-dd.herokuapp.com/
-
-
-![Sample Website Preview](./public/images/demo.png)
-
 
 ## Credits
 
