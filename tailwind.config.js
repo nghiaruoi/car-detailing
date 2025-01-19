@@ -13,7 +13,7 @@ module.exports = {
         144: "36rem",
       },
       colors: {
-        "custom-blue": "#50C878",
+        "custom-blue": "#808080",
         "custom-blue2": "#0B6623",
       },
     },
