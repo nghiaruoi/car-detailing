@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Link as RouterLink } from "react-router-dom";
-import { Link } from "react-scroll";
+import React, { useState } from 'react';
+import { Link as Route } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 const NavBar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -18,13 +18,16 @@ const NavBar = () => {
     <nav className="p-6">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
-        <RouterLink to="/" className="flex items-center">
-          <img
-            src=""
-            alt="Logo"
-            className="h-14 w-auto"
-          />
-        </RouterLink>
+          <Route
+            to="/"
+            className="flex items-center"
+          >
+            <img
+              src=""
+              alt="Logo"
+              className="h-14 w-auto"
+            />
+          </Route>
         </div>
 
         <div className="hidden md:flex space-x-10">
@@ -74,28 +77,45 @@ const NavBar = () => {
               <div className="absolute top-12  z-50 bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
                 <ul className="p-2 text-sm">
                   <li>
-                    <RouterLink
+                    <Route
+                      href="/interior"
+                      className="block px-4 py-2 hover:bg-custom-blue rounded-lg  text-gray-700 hover:text-white"
+                    >
+                      Premium Interior Detailing
+                    </Route>
+                  </li>
+                  <li>
+                    <Route
+                      href="/exterior"
+                      className="block px-4 py-2 hover:bg-custom-blue rounded-lg  text-gray-700 hover:text-white"
+                    >
+                      Premium Exterior Detailing
+                    </Route>
+                  </li>
+
+                  <li>
+                    <Route
+                      href="/cosmopolitan"
+                      className="block px-4 py-2 hover:bg-custom-blue rounded-lg  text-gray-700 hover:text-white"
+                    >
+                      Cosmopolitan Exterior & Interior Detailing
+                    </Route>
+                  </li>
+                  <li>
+                    <Route
                       to="/paint-correction"
                       className="block px-4 py-2 hover:bg-custom-blue rounded-lg  text-gray-700 hover:text-white"
                     >
                       Paint Correction
-                    </RouterLink>
+                    </Route>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 hover:bg-custom-blue rounded-lg  text-gray-700 hover:text-white"
-                    >
-                      Exterior & Interior Detailing
-                    </a>
-                  </li>
-                  <li>
-                    <a
+                    <Route
                       href="/ceramic"
                       className="block px-4 py-2 hover:bg-custom-blue rounded-lg  text-gray-700 hover:text-white"
                     >
                       Ceramic Coating
-                    </a>
+                    </Route>
                   </li>
                 </ul>
               </div>
@@ -124,7 +144,7 @@ const NavBar = () => {
             About Us
           </Link>
 
-          <RouterLink
+          <Route
             to="/contact"
             spy={true}
             smooth={true}
@@ -133,7 +153,7 @@ const NavBar = () => {
             className="text-black font-bold transition duration-300 hover:bg-custom-blue hover:text-white rounded-lg py-2 px-4"
           >
             Contact
-          </RouterLink>
+          </Route>
         </div>
 
         {/* Responsive Menu Button for Small Screens */}
@@ -203,12 +223,12 @@ const NavBar = () => {
               <div className="absolute top-12 left-1/2 transform -translate-x-1/2 z-50 bg-gray-200 divide-y divide-gray-100 rounded-lg shadow w-44">
                 <ul className="p-2 text-sm">
                   <li>
-                    <RouterLink
+                    <Route
                       to="/paint-correction"
                       className="block px-4 py-2 hover:bg-custom-blue rounded-lg  text-gray-700 hover:text-white"
                     >
                       Paint Correction
-                    </RouterLink>
+                    </Route>
                   </li>
                   <li>
                     <a
@@ -219,12 +239,12 @@ const NavBar = () => {
                     </a>
                   </li>
                   <li>
-                    <RouterLink
+                    <Route
                       to="/ceramic"
                       className="block px-4 py-2 hover:bg-custom-blue rounded-lg  text-gray-700 hover:text-white"
                     >
                       Ceramic Coating
-                    </RouterLink>
+                    </Route>
                   </li>
                 </ul>
               </div>
