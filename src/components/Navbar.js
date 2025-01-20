@@ -31,12 +31,12 @@ const NavBar = () => {
         </div>
 
         <div className="hidden md:flex space-x-10">
-          <a
+          <Route
             href="/"
             className="text-black font-bold transition duration-300 hover:bg-custom-blue hover:text-white rounded-lg py-2 px-4"
           >
             Home
-          </a>
+          </Route>
 
           <Link
             to="services"
