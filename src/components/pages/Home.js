@@ -3,6 +3,7 @@ import About from "./About";
 import Gallery from "./Gallery";
 import Services from "./Services";
 import Booking from "./Booking/Booking";
+import Slideshow from "./Slideshow/Slideshow"
 
 const Home = () => {
   // Function to scroll to the contact section
@@ -49,6 +50,8 @@ const Home = () => {
           </a>
         </div>
       </section>
+
+      <Slideshow />
 
       {/* About Section */}
       <About />

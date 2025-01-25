@@ -10,6 +10,7 @@ import Home from "./components/pages/Home";
 import PaintCorrection from "./components/pages/Service/PaintCorrection";
 import Contact from "./components/pages/Contact/Contact";
 import Booking from "./components/pages/Booking/Booking";
+import PremiumInterior from "./components/pages/Service/PremiumExterior";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/paint-correction" element={<PaintCorrection />} />
+          <Route path="/interior" element={<PremiumInterior />} />
           <Route path="/ceramic" element={<Ceramic />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/booking" element={<Booking />} />
