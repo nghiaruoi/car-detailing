@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import { Link as Route } from 'react-router-dom';
+import React, { useState, useRef, useEffect } from 'react';
+import { NavLink, Link as Route } from 'react-router-dom';
 import { Link } from 'react-scroll';
 
 const NavBar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  const dropdownRef = useRef(null)
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -13,6 +15,19 @@ const NavBar = () => {
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownRef]);
 
   return (
     <nav className="p-6">
@@ -32,7 +47,7 @@ const NavBar = () => {
 
         <div className="hidden md:flex space-x-10">
           <Route
-            href="/"
+            to="/"
             className="text-black font-bold transition duration-300 hover:bg-custom-blue hover:text-white rounded-lg py-2 px-4"
           >
             Home
@@ -50,7 +65,7 @@ const NavBar = () => {
           </Link>
 
           {/* Dropdown button for Packages */}
-          <div className="relative group">
+          <div className="relative group" ref={dropdownRef}>
             <button
               onClick={toggleDropdown}
               className="text-black font-bold transition duration-300 hover:bg-custom-blue hover:text-white rounded-lg py-2 px-4 flex items-center"
@@ -78,9 +93,10 @@ const NavBar = () => {
                 <ul className="p-2 text-sm">
                   <li>
                     <Route
-                      href="/interior"
+                      to="/interior"
                       className="block px-4 py-2 hover:bg-custom-blue rounded-lg  text-gray-700 hover:text-white"
                     >
+                      
                       Premium Interior Detailing
                     </Route>
                   </li>
@@ -102,16 +118,16 @@ const NavBar = () => {
                     </Route>
                   </li>
                   <li>
-                    <Route
+                    <NavLink
                       to="/paint-correction"
                       className="block px-4 py-2 hover:bg-custom-blue rounded-lg  text-gray-700 hover:text-white"
                     >
                       Paint Correction
-                    </Route>
+                    </NavLink>
                   </li>
                   <li>
                     <Route
-                      href="/ceramic"
+                      to="/ceramic"
                       className="block px-4 py-2 hover:bg-custom-blue rounded-lg  text-gray-700 hover:text-white"
                     >
                       Ceramic Coating

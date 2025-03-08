@@ -5,7 +5,7 @@ import Services from "./Services";
 import Booking from "./Booking/Booking";
 import Slideshow from "./Slideshow/Slideshow"
 
-const Home = () => {
+const Home = ({ to }) => {
   // Function to scroll to the contact section
   const scrollToContact = useCallback(() => {
     const contactSection = document.getElementById("contact");

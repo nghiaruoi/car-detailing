@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ServiceCard from "./Service/ServiceCard";
 
 const DownArrow = () => (
@@ -45,7 +44,7 @@ const Services = () => (
 
 const serviceList = [
   {
-    imageSrc: "/images/Paint Correction.jpg",
+    imageSrc: "/images/interior.jpg",
     title: "Premium Interior Detailing",
     description:
       "Restore your car's exterior to its showroom glory with our meticulous detailing services.",
@@ -54,7 +53,7 @@ const serviceList = [
       "Removal of light & deep swirl marks",
       "Restore showroom shine",
     ],
-    path: "/paint-correction",
+    path: "/interior",
   }, {
     imageSrc: "/images/Paint Correction.jpg",
     title: "Premium Exterior Detailing",
