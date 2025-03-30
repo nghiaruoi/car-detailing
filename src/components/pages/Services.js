@@ -64,7 +64,7 @@ const serviceList = [
       "Waxing Premium carnauba",
       "Tire Dressing",
     ],
-    path: "/paint-correction",
+    path: "/exterior",
   }
   ,
   {
@@ -88,7 +88,7 @@ const serviceList = [
     path: "/ceramic",
   },
   {
-    imageSrc: "/images/ceramic-1.jpg",
+    imageSrc: "/images/Paint-Correction-Stage-2.jpeg",
     title: "Paint Correction",
     description:
       "Protect your investment with our advanced ceramic coating that enhances and preserves your car's finish.",
@@ -99,6 +99,18 @@ const serviceList = [
     ],
     path: "/ceramic",
   },
+  {
+    imageSrc: "/images/porsche-car-care.jpeg",
+    title: "Porsche Care Care",
+    description:
+      "At Cosmopolitan Car Detailing , we specialize in bringing out the true brilliance of your Porsche. We offer exclusive, top-tier auto detailing services, using only Porsche's premium care products to ensure your vehicle is treated with the utmost attention",
+    features: [
+      "High-quality care productse",
+      "Porsche Shampoo",
+      "Brilliant deep gloss finish",
+    ],
+    path: "/porsche",
+  }
 
 ]
 export default Services;

@@ -10,8 +10,10 @@ import Home from "./components/pages/Home";
 import PaintCorrection from "./components/pages/Service/PaintCorrection";
 import Contact from "./components/pages/Contact/Contact";
 import Booking from "./components/pages/Booking/Booking";
-import PremiumInterior from "./components/pages/Service/PremiumExterior";
+import Cosmopolitan from "./components/pages/Service/Cosmopolitan";
 import PremiumInteriorDetailing from "./components/pages/Service/PremiumInteriorDetailing";
+import PremiumExterior from "./components/pages/Service/PremiumExterior";
+import Porsche from "./components/pages/Service/Porsche";
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/paint-correction" element={<PaintCorrection />} />
           <Route path="/interior" element={<PremiumInteriorDetailing />} />
+          <Route path="/exterior" element={<PremiumExterior/>} />
+          <Route path="/cosmopolitan" element={<Cosmopolitan/>} />
+          <Route path="/porsche" element={<Porsche/>} />
           <Route path="/ceramic" element={<Ceramic />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/booking" element={<Booking />} />

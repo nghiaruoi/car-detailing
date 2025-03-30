@@ -1,6 +1,8 @@
 import './PremiumInteriorDetailing.css'; // Assuming you have a CSS file for styling
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import DynamicTwoColumnSection from './DynamicTwoColumnSection';
+import DynamicTwoColumnDescriptionSection from './DynamicTwoColumnDescriptionSection';
 
 // const PremiumInteriorDetailing = () => {
 //   return (
@@ -81,81 +83,6 @@ const LearnMoreButton = ({ to }) => (
 		<span className="relative invisible">Schedule Now</span>
 	</Link>
 );
-
-const DynamicTwoColumnDescriptionSection = ({ leftSection, rightSection }) => {
-	return (
-		<div className="columns">
-			{/* Left Section (Includes) */}
-			<div className="includes">
-				<section>
-					<h2 className="text-3xl font-bold text-gray-800 uppercase tracking-wide mb-4">
-						{leftSection.title}
-					</h2>
-					{/* Replace list with two paragraphs */}
-					<p>{leftSection.paragraph}</p>
-				</section>
-				{/* Image at the bottom of the left column */}
-				<div className="mt-6">
-					<img
-						src={leftSection.image} // Pass the image URL as a prop
-						alt="Left Section"
-						className="w-64 h-auto"
-					/>
-				</div>
-			</div>
-
-			{/* Right Section (Top Star) */}
-			<div className="top-star">
-				<section>
-					<h2 className="text-3xl font-bold text-gray-800 uppercase tracking-wide mb-4">
-						{rightSection.title}
-					</h2>
-					<p>{rightSection.paragraph}</p>
-					{/* Replace list with two paragraphs */}
-				</section>
-        <div className="mt-6">
-          <img
-            src={rightSection.image} // Pass the image URL as a prop
-            alt="Right Section"
-            className="w-64 h-auto"
-          />
-        </div>
-			</div>
-		</div>
-	);
-};
-
-const DynamicTwoColumnSection = ({ title, leftSection, rightSection }) => {
-	return (
-		<div className="dynamic-section">
-			{/* Title on Top */}
-			<div className="section-title">
-				<h2 className="text-3xl font-bold text-gray-800 uppercase tracking-wide mb-6 pb-2 border-b-4 border-custom-blue">
-					{title}
-				</h2>
-			</div>
-
-			{/* Combined Left and Right Sections */}
-			<div className="columns">
-				<section className="includes">
-					<ul>
-						{leftSection.items.map((item, index) => (
-							<li key={index}>{item}</li>
-						))}
-					</ul>
-				</section>
-
-				<section className="top-star">
-					<ul>
-						{rightSection.items.map((item, index) => (
-							<li key={index}>{item}</li>
-						))}
-					</ul>
-				</section>
-			</div>
-		</div>
-	);
-};
 
 // Reusable Package Section component
 const PackageSection = ({
@@ -250,17 +177,16 @@ const PremiumInteriorDetailing = () => {
 						</span>
 					</h1>
 					<p className=" leading-7">
-						Step into Foam Experts Detailing, the intersection of automotive
-						excellence and precision. Enhance your vehicle's allure with our
-						premium Car Paint Correction Service. Our adept detailing artisans
-						employ cutting-edge techniques and superior products to eliminate
-						imperfections like swirl marks and scratches, revealing a brilliant,
-						showroom-ready finish. At Foam Experts Detailing, we boast
-						meticulous craftsmanship and an unyielding commitment to excellence.
-						Rely on us to rejuvenate your vehicle's paintwork, ensuring it
-						shines with a brilliance that exceeds expectations. Embark on the
-						ultimate automotive detailing journey – opt for Foam Experts
-						Detailing for an impeccable transformation.
+						Step into Cosmopolitan Detailing, where automotive excellence meets
+						precision craftsmanship. Elevate your vehicle's presence with our
+						premium Exterior Detailing Service, where our master detailers
+						combine cutting-edge techniques with elite-grade products to erase
+						swirl marks, scratches, and environmental wear—revealing a
+						mirror-like, showroom finish. At Cosmopolitan, we don’t just clean;
+						we restore with an obsession for perfection, ensuring every curve
+						and contour reflects unmatched brilliance. Trust us to transform
+						your vehicle’s exterior into a statement of sophistication, where
+						protection meets unparalleled shine. This is detailing, perfected.
 					</p>
 				</div>
 
@@ -323,13 +249,13 @@ const paragraphData = {
 		title: 'Top Star',
 		paragraph:
 			'Premium emulsion for deep pore cleaning and refreshing of plastic and rubber parts such as consoles, interior trim, seals, etc. Top Star gives the surface a persistent semi-gloss natural shine and protects it from new contaminants and ultraviolet radiation for a long time. Special active ingredients give the plastic elasticity, have an antistatic effect and give it a new attractive appearance. It has a fresh aroma. Approved by Daimler.',
-    image: "/images/topstar.png"
-    },
+		image: '/images/topstar.png',
+	},
 	rightSection: {
 		title: 'ProtectLeatherCare',
 		paragraph:
 			'Premium emulsion for the care of all leather parts. Creates a colour-refreshing sleek result and intensifies the incomparable smell of leather. Provides all types of leather with the necessary care and a pleasantly soft feel.',
-    image: "/images/premiumleathercare.png"
+		image: '/images/premiumleathercare.png',
 	},
 };
 

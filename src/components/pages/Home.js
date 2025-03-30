@@ -20,9 +20,9 @@ const Home = ({ to }) => {
       <section className="relative flex justify-center h-screen text-black ">
         {/* Background Image */}
         <div
-          className="absolute inset-0 overflow-hidden flex items-center lg:translate-x-1/4 w-1/2 h-1/2 top-1/4 left-1/4 "
+          className="absolute inset-0 overflow-hidden flex items-center lg:translate-x-1/4 w-1/2 h-3/4 top-1/4 left-1/4 "
           style={{
-            backgroundImage: 'url("/images/g-wagon-hd-resized.png")',
+            backgroundImage: 'url("/images/g-wagon.jpg")',
             backgroundSize: "cover",
             backgroundPosition: "left",
           }}

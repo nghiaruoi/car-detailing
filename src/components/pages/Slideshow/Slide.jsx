@@ -2,13 +2,13 @@ import React from 'react';
 
 function SlideDisplay({ title, text, imageSrc }) {
 	return (
-		<div className="each-fade mx-4 md:mx-20 flex flex-col md:flex-row">
-			<div className="w-full md:w-2/3">
-				<h1 className="text-2xl md:text-6xl font-bold text-slate-500">
+		<div className="each-fade mx-4 md:mx-20 flex flex-col md:flex-row items-start">
+			<div className="w-full md:w-2/3 text-left">
+				<h1 className="text-2xl md:text-6xl font-bold text-slate-500 text-left">
 					<strong>{title}</strong>
 				</h1>
-				<div className="mt-4 md:mt-8">
-					<p className="text-sm md:text-lg">
+				<div className="mt-4 md:mt-8 text-left">
+					<p className="text-sm md:text-lg text-left">
 						<strong>{text}</strong>
 					</p>
 				</div>
@@ -17,8 +17,8 @@ function SlideDisplay({ title, text, imageSrc }) {
 				<img
 					src={imageSrc}
 					alt={title}
-				/>{' '}
-				{/* Add alt text for accessibility */}
+					className="w-full h-auto"
+				/>
 			</div>
 		</div>
 	);
